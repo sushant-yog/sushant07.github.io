@@ -24,16 +24,6 @@ This repository contains my personal website where visitors can play interactive
 /games  
 /yoga  
 
-## 🚀 Live Demo
-
-https://yourusername.github.io/
-
-## 📌 How to Run Locally
-
-1. Clone the repository  
-   git clone https://github.com/yourusername/your-repository-name.git
-
-2. Open `index.html` in your browser
 
 ## 🔮 Future Improvements
 
