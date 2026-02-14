@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Yoga with Sushant</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+            <a href="index.html" style="text-decoration: none;">
+                <div class="site-title">Yoga with Sushant</div>
+            </a>
+        </div>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="hamburger" id="hamburger-yoga" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container-glass"
+        style="margin-top: 4rem; padding: 0; overflow: hidden; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 1100px; background: white;">
+        <div style="display: flex; flex-wrap: wrap; min-height: 700px;">
+            <!-- Info Sidebar -->
+            <div
+                style="flex: 1; min-width: 320px; background: #e8f5e9; padding: 4rem 3rem; border-right: 1px solid #c8e6c9;">
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <h1
+                        style="text-align: left; color: #1b5e20; font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700;">
+                        Let's Connect</h1>
+                    <p style="text-align: left; color: #33691e; margin-bottom: 3rem; line-height: 1.8;">We're here to
+                        support your journey. Reach out for any inquiries about our online classes, schedules, or
+                        private sessions.</p>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4
+                            style="font-size: 0.8rem; text-transform: uppercase; color: #2e7d32; letter-spacing: 2px; margin-bottom: 2rem; font-weight: 700;">
+                            Support Channels</h4>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <div
+                                style="width: 45px; height: 45px; border-radius: 50%; background: #c8e6c9; display: flex; align-items: center; justify-content: center; color: #1b5e20; flex-shrink: 0;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p
+                                    style="margin: 0; font-weight: 600; color: #1b5e20; font-size: 1rem; text-align: left;">
+                                    Email Us</p>
+                                <a href="mailto:sushant.yog@outlook.com"
+                                    style="color: #33691e; text-decoration: none; font-size: 0.95rem; text-align: left; display: block;">sushant.yog@outlook.com</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <div
+                                style="width: 45px; height: 45px; border-radius: 50%; background: #c8e6c9; display: flex; align-items: center; justify-content: center; color: #1b5e20; flex-shrink: 0;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p
+                                    style="margin: 0; font-weight: 600; color: #1b5e20; font-size: 1rem; text-align: left;">
+                                    Call Support
+                                </p>
+                                <p style="margin: 0; color: #33691e; font-size: 0.95rem; text-align: left;">
+                                    +977-9705944749</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 3rem;">
+                        <h4
+                            style="font-size: 0.8rem; text-transform: uppercase; color: #2e7d32; letter-spacing: 2px; margin-bottom: 2rem; font-weight: 700;">
+                            Virtual Presence</h4>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <div
+                                style="width: 45px; height: 45px; border-radius: 50%; background: #c8e6c9; display: flex; align-items: center; justify-content: center; color: #1b5e20; flex-shrink: 0;">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <p
+                                    style="margin: 0; font-weight: 600; color: #1b5e20; font-size: 1rem; text-align: left;">
+                                    Serving
+                                    Students Globally</p>
+                                <p style="margin: 0; color: #33691e; font-size: 0.95rem; text-align: left;">From
+                                    Kathmandu, Nepal (GMT
+                                    +5:45)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #c8e6c9; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                        <p style="margin-bottom: 1rem; font-weight: 600; color: #1b5e20;">Need instant help?</p>
+                        <a href="https://wa.me/9779705944749" class="btn btn-pro"
+                            style="background: #25D366; color: white; width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; border-radius: 12px; height: 50px; font-weight: 600;">
+                            <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div style="flex: 1.5; min-width: 400px; padding: 4rem 3rem; background: #f1f8e9;">
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <h2 style="color: #2e7d32; font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700;">
+                        Get in Touch</h2>
+                    <h3 style="color: #1b5e20; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 600;">How can we
+                        help?
+                    </h3>
+                    <form class="form-professional" id="contact-form"
+                        style="max-width: none; gap: 1.5rem; display: grid;">
+                        <div class="form-group-pro">
+                            <label
+                                style="color: #33691e; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; display: block;">Your
+                                Name</label>
+                            <input type="text" name="name" class="form-control"
+                                style="border-radius: 12px; height: 55px; background: #ffffff; border-color: #c8e6c9;"
+                                placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group-pro">
+                            <label
+                                style="color: #33691e; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; display: block;">Email
+                                Address</label>
+                            <input type="email" name="email" class="form-control"
+                                style="border-radius: 12px; height: 55px; background: #ffffff; border-color: #c8e6c9;"
+                                placeholder="email@address.com" required>
+                        </div>
+                        <div class="form-group-pro">
+                            <label
+                                style="color: #33691e; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; display: block;">Inquiry
+                                Type</label>
+                            <select name="inquiry_type" class="form-control"
+                                style="border-radius: 12px; height: 55px; background: #ffffff; border-color: #c8e6c9;">
+                                <option>General Inquiry</option>
+                                <option>Online Class Enrollment</option>
+                                <option>Payment Support</option>
+                                <option>Technical Issue</option>
+                            </select>
+                        </div>
+                        <div class="form-group-pro">
+                            <label
+                                style="color: #33691e; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; display: block;">Message</label>
+                            <textarea name="message" class="form-control" rows="6"
+                                style="border-radius: 12px; background: #ffffff; border-color: #c8e6c9; padding-top: 1rem; width: 100%; border: 2px solid #c8e6c9; padding-left: 0.875rem;"
+                                placeholder="Tell us more about your inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-pro btn-primary"
+                            style="width: 100%; height: 55px; border-radius: 12px; font-weight: 700; font-size: 1rem; background: #2e7d32; color: white; border: none; cursor: pointer;">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="script.js"></script>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+</body>
+
+</html>

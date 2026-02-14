@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Yoga with Sushant</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+
+    <main class="container"
+        style="padding-top: 4rem; min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+        <div
+            style="background: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-lg); width: 100%; max-width: 400px;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>Welcome Back</h2>
+                <p>Please log in to your account.</p>
+            </div>
+
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required id="email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" required id="password">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Log In</button>
+            </form>
+
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+                Don't have an account? <a href="registration.html"
+                    style="color: var(--color-primary); font-weight: bold;">Register here</a>
+            </p>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            if (email.includes('admin')) {
+                window.location.href = 'admin.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

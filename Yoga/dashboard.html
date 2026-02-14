@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Yoga with Sushant</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+
+    <main class="container" style="padding-top: 4rem;">
+        <div class="section-title"
+            style="text-align: left; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1>My Dashboard</h1>
+                <p>Namaste, Student!</p>
+            </div>
+            <button class="btn btn-accent" onclick="alert('Feature coming soon!')">Edit Profile</button>
+        </div>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+            <!-- Stats -->
+            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                <h3>Classes Attended</h3>
+                <p style="font-size: 2rem; color: var(--color-primary); font-weight: bold; margin: 0;">12</p>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                <h3>Membership Status</h3>
+                <p style="font-size: 1.2rem; color: var(--color-success); font-weight: bold; margin: 0;">Active (Expires
+                    in 15 days)</p>
+            </div>
+        </div>
+
+        <h2>Upcoming Classes</h2>
+        <div style="background: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead style="background-color: #f8f9fa;">
+                    <tr>
+                        <th style="padding: 1rem; text-align: left;">Class</th>
+                        <th style="padding: 1rem; text-align: left;">Date & Time</th>
+                        <th style="padding: 1rem; text-align: left;">Instructor</th>
+                        <th style="padding: 1rem; text-align: left;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 1rem;">Morning Vinyasa</td>
+                        <td style="padding: 1rem;">Tomorrow, 6:00 AM</td>
+                        <td style="padding: 1rem;">Sushant</td>
+                        <td style="padding: 1rem;"><span style="color: var(--color-success);">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;">Power Yoga</td>
+                        <td style="padding: 1rem;">Saturday, 7:00 AM</td>
+                        <td style="padding: 1rem;">Sushant</td>
+                        <td style="padding: 1rem;"><span style="color: #f39c12;">Pending Payment</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

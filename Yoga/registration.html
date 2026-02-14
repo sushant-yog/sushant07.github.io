@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Yoga with Sushant</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <!-- .form-section-header {
+    border-bottom: 2px solid #eee;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    color: #2e7d32;
+    font-weight: 700;
+    }
+
+    .refund-policy {
+    background: #fff3cd;
+    color: #856404;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ffeeba;
+    text-align: center;
+    font-weight: 600;
+    margin: 2rem 0;
+    display: block;
+    }
+
+    .timing-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    }
+
+    .timing-box ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    .timing-box li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    }
+
+    .timing-box i {
+    color: #2e7d32;
+    }
+
+    .input-inline-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    }
+
+    .input-inline-group select {
+    flex: 0 0 150px;
+    }
+
+    .input-inline-group input {
+    flex: 1;
+    }
+
+    @media (max-width: 600px) {
+    .input-inline-group {
+    flex-direction: column;
+    align-items: stretch;
+    }
+
+    .input-inline-group select {
+    flex: none;
+    }
+    }
+    -->
+    </style>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+            <a href="index.html" style="text-decoration: none;">
+                <div class="site-title">Yoga with Sushant</div>
+            </a>
+        </div>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="hamburger" id="hamburger-yoga" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="container" style="margin-top: 4rem; max-width: 900px;">
+        <div class="page-header">
+            <h1>Register for Online Classes</h1>
+            <p>Ready to transform your life? Let's get started.</p>
+        </div>
+
+        <!-- Toggleable Rules & Benefits -->
+        <div id="rules-toggle" class="toggle-box">
+            <div class="toggle-header" onclick="toggleSection('rules-toggle')">
+                <span>Rules & Regulations</span>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="toggle-content">
+                <ul style="padding-left: 1.5rem; color: #444;">
+                    <li style="margin-bottom: 0.5rem;">For <b>both men and women</b>.</li>
+                    <li style="margin-bottom: 0.5rem;"><b>Beginner and intermediate</b> friendly classes.</li>
+                    <li style="margin-bottom: 0.5rem;"><b>Recordings available daily</b> for the current month.</li>
+                    <li style="margin-bottom: 0.5rem;">No demo classes. No refunds after registration.</li>
+                    <li style="margin-bottom: 0.5rem;">Classes held on <b>Google Meet</b>. Videos must be ON.</li>
+                    <li style="margin-bottom: 0.5rem;">Consult your doctor before joining.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="benefits-toggle" class="toggle-box">
+            <div class="toggle-header" onclick="toggleSection('benefits-toggle')">
+                <span>Why to Join? (Benefits & Coverage)</span>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="toggle-content">
+                <p
+                    style="font-style: italic; color: #1b5e20; border-left: 3px solid #66bb6a; padding-left: 1rem; margin-bottom: 1rem;">
+                    "Add meaning to your life by sparing just an hour... learn to surrender, learn to manage your mind,
+                    and find the real essence of yoga."
+                </p>
+                <div style="font-weight: 700; color: #2e7d32; margin-top: 1rem;">What we cover:</div>
+                <ul style="color: #2e7d32; font-size: 0.9rem;">
+                    <li>Hatha/Ashtanga Yoga, Kriyas, Asanas, Meditation.</li>
+                    <li>Postural correction, respiratory health, and weight management.</li>
+                    <li>Stress, anxiety, and hormonal balance (PCOS/Thyroid) support.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <form class="minimal-form" id="registration-form">
+            <div class="form-section-header" style="text-align: center; margin-bottom: 2rem;"><strong>Registration
+                    Form</strong></div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Full Name</label>
+                    <input type="text" name="full_name" class="form-input-minimal" required
+                        placeholder="Your full name">
+                </div>
+                <div class="form-group-minimal">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="form-input-minimal" required
+                        placeholder="Your email address">
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Phone Number</label>
+                    <div class="input-inline-group" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <select name="phone_country_code" class="form-input-minimal" required
+                            style="flex: 0 0 100px; padding: 0.8rem 0.2rem;"
+                            onchange="handleCountryCodeChange(this, 'phone-custom-code')">
+                            <option value="+977" selected>🇳🇵 +977</option>
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+61">🇦🇺 +61</option>
+                            <option value="+1">🇨🇦/🇺🇸 +1</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="text" name="phone_custom_code" id="phone-custom-code" class="form-input-minimal"
+                            style="display: none; flex: 0 0 80px;" placeholder="+Code">
+                        <input type="tel" name="phone_number" class="form-input-minimal" placeholder="Phone Number"
+                            required style="flex: 1; min-width: 150px;">
+                    </div>
+                </div>
+                <div class="form-group-minimal">
+                    <label>WhatsApp Number</label>
+                    <div class="input-inline-group" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <select name="whatsapp_country_code" class="form-input-minimal" required
+                            style="flex: 0 0 100px; padding: 0.8rem 0.2rem;"
+                            onchange="handleCountryCodeChange(this, 'whatsapp-custom-code')">
+                            <option value="+977" selected>🇳🇵 +977</option>
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+61">🇦🇺 +61</option>
+                            <option value="+1">🇨🇦/🇺🇸 +1</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="text" name="whatsapp_custom_code" id="whatsapp-custom-code"
+                            class="form-input-minimal" style="display: none; flex: 0 0 80px;" placeholder="+Code">
+                        <input type="tel" name="whatsapp_number" class="form-input-minimal"
+                            placeholder="WhatsApp Number" required style="flex: 1; min-width: 150px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Gender</label>
+                    <select name="gender" class="form-input-minimal" required>
+                        <option value="">Choose Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group-minimal">
+                    <label>Age</label>
+                    <input type="number" name="age" class="form-input-minimal" required placeholder="Age">
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Weight</label>
+                    <div class="unit-selector-wrapper">
+                        <input type="number" name="weight" class="form-input-minimal" required placeholder="Weight"
+                            min="1" max="999" oninput="if(value.length>4)value=value.slice(0,4)">
+                        <select name="weight_unit" class="form-input-minimal unit-select">
+                            <option value="kg">KG</option>
+                            <option value="lb">LB</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group-minimal">
+                    <label>Height</label>
+                    <div class="unit-selector-wrapper">
+                        <input type="text" name="height" class="form-input-minimal" required placeholder="Height"
+                            id="height-input">
+                        <select name="height_unit" class="form-input-minimal unit-select" id="height-unit"
+                            onchange="updateHeightPlaceholder()">
+                            <option value="cm">cm</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group-minimal">
+                <label>District / Country</label>
+                <input type="text" name="location" class="form-input-minimal" required placeholder="Your location"
+                    pattern="[A-Za-z\s]+" title="Numbers are not allowed in the location field">
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Have you practiced yoga before?</label>
+                    <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                        <label style="font-weight: normal;"><input type="radio" name="experience" value="yes" required>
+                            Yes</label>
+                        <label style="font-weight: normal;"><input type="radio" name="experience" value="no"> No</label>
+                    </div>
+                </div>
+                <div class="form-group-minimal">
+                    <label>Any health conditions or accidental injuries?</label>
+                    <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                        <label style="font-weight: normal;"><input type="radio" name="health" value="yes" required>
+                            Yes</label>
+                        <label style="font-weight: normal;"><input type="radio" name="health" value="no"> No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group-minimal">
+                <label>Explanation (if any):</label>
+                <textarea name="explanation" class="form-input-minimal" rows="2"
+                    placeholder="Tell us about your health or experience..."></textarea>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group-minimal">
+                    <label>Membership Plan</label>
+                    <select name="plan" class="form-input-minimal" required id="plan-select">
+                        <option value="1m">1 Month (Rs. 1500 / $15)</option>
+                        <option value="3m">3 Months (Rs. 4500 / $40)</option>
+                        <option value="6m">6 Months (Rs. 8000 / $70)</option>
+                    </select>
+                </div>
+                <div class="form-group-minimal">
+                    <label>Payment Method</label>
+                    <select name="payment_method" class="form-input-minimal" required id="payment-method">
+                        <option value="" disabled selected>Choose Payment Method</option>
+                        <option value="esewa">eSewa</option>
+                        <option value="khalti">Khalti</option>
+                        <option value="bank">Bank Transfer</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="payment-qr"
+                style="display: none; text-align: center; margin: 1.5rem 0; padding: 1.5rem; background: #fff; border-radius: 12px; border: 2px dashed #2e7d32;">
+                <p style="font-weight: 700; color: #2e7d32; margin-bottom: 1rem;">Scan QR to Pay</p>
+                <img src="QR.jpg" alt="Payment QR"
+                    style="max-width: 150px; border: 5px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div id="bank-details"
+                    style="display: none; text-align: left; margin-top: 1rem; font-size: 0.9rem; color: #333;">
+                    <p><strong>Bank:</strong> [Bank Name] | <strong>A/C:</strong> [A/C No]</p>
+                    <p><strong>SWIFT:</strong> [Swift Code]</p>
+                </div>
+            </div>
+
+            <div class="form-group-minimal">
+                <label>Upload Payment Screenshot</label>
+                <input type="file" name="payment_screenshot" class="form-input-minimal" accept="image/*" required>
+            </div>
+
+            <div class="timing-box" style="margin-bottom: 2rem;">
+                <div
+                    style="font-weight: 700; color: #2e7d32; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                    Class Schedule</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                    <div><i class="fas fa-clock"></i> 4:30 - 5:30 AM</div>
+                    <div><i class="fas fa-calendar-alt"></i> Mon - Fri (Live)</div>
+                    <div><i class="fas fa-user-check"></i> Sunday: Self Practice</div>
+                    <div><i class="fas fa-moon"></i> Saturday: Rest</div>
+                </div>
+            </div>
+
+            <div class="refund-alert">
+                ⚠️ IMPORTANT NOTICE:<br>
+                Once the registration is done, the money won't be refunded back to you.
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="back-button"
+                    style="padding: 1rem 4rem; font-size: 1.2rem; border-radius: 50px;">Complete Registration</button>
+            </div>
+        </form>
+
+        <script>
+            function updateHeightPlaceholder() {
+                const unit = document.getElementById('height-unit').value;
+                const input = document.getElementById('height-input');
+                if (unit === 'cm') {
+                    input.placeholder = "e.g. 173";
+                    input.pattern = "\\d+";
+                    input.title = "Please enter height in cm (numbers only)";
+                } else {
+                    input.placeholder = "e.g. 5.7";
+                    input.pattern = "\\d+(\\.\\d+)?";
+                    input.title = "Please enter height in feet (e.g. 5.7)";
+                }
+            }
+            // Initialize
+            updateHeightPlaceholder();
+
+            const paymentSelect = document.getElementById('payment-method');
+            const qrSection = document.getElementById('payment-qr');
+            const bankDetails = document.getElementById('bank-details');
+
+            paymentSelect.addEventListener('change', (e) => {
+                if (e.target.value === 'esewa' || e.target.value === 'khalti') {
+                    qrSection.style.display = 'block';
+                    bankDetails.style.display = 'none';
+                } else if (e.target.value === 'bank') {
+                    qrSection.style.display = 'block';
+                    bankDetails.style.display = 'block';
+                }
+            });
+        </script>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Yoga with Sushant</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+            <a href="index.html" style="text-decoration: none;">
+                <div class="site-title">Yoga with Sushant</div>
+            </a>
+        </div>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="hamburger" id="hamburger-yoga" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 4rem;">
+        <div class="page-header">
+            <h1 style="color: #2e7d32;">Membership Plans</h1>
+            <p style="color: #666; opacity: 0.8;">Standardized plans for consistent online learning.</p>
+        </div>
+
+        <div class="card-grid">
+
+            <!-- 1 Month -->
+            <div class="card"
+                style="border-top: 5px solid #ccc; background: white; color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div class="card-title" style="color: #2e7d32;">1 Month</div>
+                <div class="card-price">Rs. 1,500 <span style="font-size: 1rem; opacity: 0.6;">/ Month</span></div>
+                <ul class="card-features">
+                    <li>Daily Live Online Classes</li>
+                    <li>Interactive Q&A Sessions</li>
+                    <li>Recordings Available (Full Plan Duration)</li>
+                </ul>
+                <a href="registration.html" class="btn btn-pro btn-primary">Join Now</a>
+            </div>
+
+            <!-- 3 Months -->
+            <div class="card"
+                style="border-top: 5px solid #2e7d32; background: white; color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div class="card-title" style="color: #2e7d32;">3 Months</div>
+                <div class="card-price">Rs. 4,500</div>
+                <ul class="card-features">
+                    <li>Daily Live Online Classes</li>
+                    <li>Interactive Q&A Sessions</li>
+                    <li>Recordings Available (Full Plan Duration)</li>
+                </ul>
+                <a href="registration.html" class="btn btn-pro btn-primary">Join Now</a>
+            </div>
+
+            <!-- 6 Months -->
+            <div class="card"
+                style="border-top: 5px solid #2e7d32; background: white; color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div class="card-title" style="color: #2e7d32;">6 Months</div>
+                <div class="card-price">Rs. 8,000</div>
+                <ul class="card-features">
+                    <li>Daily Live Online Classes</li>
+                    <li>Interactive Q&A Sessions</li>
+                    <li>Recordings Available (Full Plan Duration)</li>
+                </ul>
+                <a href="registration.html" class="btn btn-pro btn-primary">Join Now</a>
+            </div>
+
+        </div>
+
+        <div
+            style="margin-top: 3rem; text-align: center; background: rgba(46, 125, 50, 0.1); padding: 2rem; border-radius: 12px; border: 1px solid var(--primary-color);">
+            <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">International Students (USD)</h3>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong style="display: block; font-size: 1.2rem;">1 Month</strong>
+                    <span style="font-size: 1.5rem; color: var(--primary-color); font-weight: bold;">$15</span>
+                </div>
+                <div style="border-left: 1px solid #ccc; padding-left: 2rem;">
+                    <strong style="display: block; font-size: 1.2rem;">3 Months</strong>
+                    <span style="font-size: 1.5rem; color: var(--primary-color); font-weight: bold;">$40</span>
+                </div>
+                <div style="border-left: 1px solid #ccc; padding-left: 2rem;">
+                    <strong style="display: block; font-size: 1.2rem;">6 Months</strong>
+                    <span style="font-size: 1.5rem; color: var(--primary-color); font-weight: bold;">$70</span>
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.8;">Payment via Direct Bank Transfer. Contact
+                us
+                for SWIFT details.</p>
+        </div>
+
+        <div
+            style="margin-top: 2rem; text-align: center; background: #fff3cd; padding: 1.5rem; border-radius: 12px; border: 1px dashed #856404;">
+            <p style="font-weight: 600; color: #856404; margin: 0;">
+                <i class="fas fa-video"></i> All classes are recorded. Access provided until the last date of your
+                membership.
+            </p>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="script.js"></script>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+</body>
+
+</html>

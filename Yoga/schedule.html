@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | Yoga with Sushant</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+            <a href="index.html" style="text-decoration: none;">
+                <div class="site-title">Yoga with Sushant</div>
+            </a>
+        </div>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="hamburger" id="hamburger-yoga" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 4rem;">
+        <div class="page-header">
+            <h1 style="color: #2e7d32;">Class Schedule</h1>
+            <p>Find a time that works for you.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-glass" style="color: var(--text-color);">
+                <thead style="background: var(--primary-color); color: white;">
+                    <tr>
+                        <th>Time (GMT +5:45)</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--input-border);">
+                        <td style="font-weight: bold; color: var(--primary-color);">04:30 AM - 05:30 AM</td>
+                        <td>Online Yoga</td>
+                        <td>Online Yoga</td>
+                        <td>Online Yoga</td>
+                        <td>Online Yoga</td>
+                        <td>Online Yoga</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6"
+                            style="text-align: center; padding: 2rem; color: var(--text-color); opacity: 0.7;">
+                            <i>Saturday: Rest Day | Sunday: Self Practice</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4" style="text-align: center;">
+            <a href="registration.html" class="btn btn-pro btn-primary">Join the Morning Batch</a>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="script.js"></script>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+</body>
+
+</html>

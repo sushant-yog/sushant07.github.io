@@ -1,0 +1,270 @@
+/* ===================================================
+   Flappy Hen — Responsive Game Styles
+   Font: Poppins (clean, modern, no decorative fonts)
+   =================================================== */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --text-color: #ffffff;
+    --accent-color: #ffd54f;
+    --hud-best: #ce93d8;
+    --hud-score: #81d4fa;
+    --overlay-bg: rgba(0, 0, 0, 0.55);
+}
+
+body.light-theme {
+    --bg-gradient: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    --text-color: #2c3e50;
+    --accent-color: #1b5e20;
+    --hud-best: #4a148c;
+    --hud-score: #01579b;
+    --overlay-bg: rgba(255, 255, 255, 0.7);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* prevent any scroll */
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* ---------- Game Container ---------- */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    position: relative;
+}
+
+/* ---------- Title ---------- */
+#game-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin-bottom: 6px;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+/* ---------- HUD (Score / Best) ---------- */
+#hud {
+    display: flex;
+    gap: 24px;
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+#hud-score {
+    color: var(--hud-score);
+}
+
+#hud-best {
+    color: var(--hud-best);
+}
+
+/* ---------- Canvas Wrapper ---------- */
+#canvas-wrapper {
+    position: relative;
+    width: min(90vw, 400px);
+    aspect-ratio: 2 / 3;
+    max-height: calc(100vh - 140px);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.08),
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(100, 120, 255, 0.15);
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+/* ---------- Overlays (Start / Game-Over) ---------- */
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 10;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+    animation: bounce 1.2s ease-in-out infinite;
+    image-rendering: auto;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.overlay-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    color: var(--accent-color);
+    margin-bottom: 6px;
+}
+
+.overlay-sub {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 18px;
+}
+
+.overlay-score {
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    font-weight: 900;
+    color: var(--hud-score);
+    margin-bottom: 4px;
+}
+
+.overlay-best {
+    font-size: clamp(0.95rem, 2.8vw, 1.2rem);
+    font-weight: 600;
+    color: var(--hud-best);
+    margin-bottom: 18px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 700;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffd54f, #ffb300);
+    color: #3e2723;
+    box-shadow: 0 4px 16px rgba(255, 180, 0, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+    touch-action: manipulation;
+    /* prevent 300ms delay on mobile */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 180, 0, 0.5);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ---------- Sound Toggle ---------- */
+.btn-icon {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+    touch-action: manipulation;
+}
+
+.btn-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- Responsive tweaks ---------- */
+/* ---------- Theme Toggle ---------- */
+#theme-toggle {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light-theme #theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .fa-moon {
+    display: none;
+}
+
+body:not(.light-theme) .fa-sun {
+    display: none;
+}
+
+@media (max-height: 500px) {
+    #game-title {
+        display: none;
+    }
+
+    #hud {
+        margin-bottom: 4px;
+    }
+
+    #canvas-wrapper {
+        max-height: calc(100vh - 60px);
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Flappy Hen — a fun Flappy Bird-style game. Tap or press space to fly!">
+  <title>Flappy Hen</title>
+  <!-- Google Fonts: Poppins for clean modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ===== Game Container ===== -->
+  <div id="game-container">
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" title="Toggle Theme">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Title -->
+    <h1 id="game-title">Flappy Hen</h1>
+
+    <!-- HUD: Score & Best Score -->
+    <div id="hud">
+      <span id="hud-score">Score: 0</span>
+      <span id="hud-best">Best: 0</span>
+    </div>
+
+    <!-- Canvas wrapper for responsive scaling -->
+    <div id="canvas-wrapper">
+      <canvas id="gameCanvas"></canvas>
+
+      <!-- Start overlay -->
+      <div id="overlay-start" class="overlay">
+        <img class="overlay-logo" src="https://i.postimg.cc/1X0cmd2D/icon.png" alt="Flappy Hen">
+        <p class="overlay-heading">Flappy Hen</p>
+        <p class="overlay-sub">Tap or press Space to fly</p>
+        <button id="btn-start" class="btn">Start Game</button>
+      </div>
+
+      <!-- Game-over overlay -->
+      <div id="overlay-gameover" class="overlay hidden">
+        <p class="overlay-heading">Game Over</p>
+        <p id="final-score" class="overlay-score">Score: 0</p>
+        <p id="final-best" class="overlay-best">Best: 0</p>
+        <button id="btn-restart" class="btn">Restart</button>
+      </div>
+    </div>
+
+    <!-- Sound toggle -->
+    <button id="btn-sound" class="btn-icon" title="Toggle Sound">🔊</button>
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="bg_sound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="gameOverMusic" preload="auto">
+    <source src="game_over 1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

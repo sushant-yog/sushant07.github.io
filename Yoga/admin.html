@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Yoga with Sushant</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+
+    <main class="container" style="padding-top: 4rem;">
+        <div class="section-title" style="text-align: left;">
+            <h1>Admin Dashboard</h1>
+            <p>Overview of studio performance.</p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p style="font-size: 2rem; font-weight: bold;">154</p>
+            </div>
+            <div class="stat-card" style="border-color: var(--color-accent);">
+                <h3>Active Enrollments</h3>
+                <p style="font-size: 2rem; font-weight: bold;">42</p>
+            </div>
+            <div class="stat-card" style="border-color: var(--color-success);">
+                <h3>Revenue (This Month)</h3>
+                <p style="font-size: 2rem; font-weight: bold;">NPR 85,000</p>
+            </div>
+            <div class="stat-card" style="border-color: #c0392b;">
+                <h3>Pending Payments</h3>
+                <p style="font-size: 2rem; font-weight: bold;">8</p>
+            </div>
+        </div>
+
+        <!-- Class Management -->
+        <div style="margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Class Occupancy</h2>
+                <button class="btn btn-primary">+ Add New Class</button>
+            </div>
+            <div style="background: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead style="background-color: #f8f9fa;">
+                        <tr>
+                            <th style="padding: 1rem; text-align: left;">Class Name</th>
+                            <th style="padding: 1rem; text-align: left;">Schedule</th>
+                            <th style="padding: 1rem; text-align: left;">Registered / Capacity</th>
+                            <th style="padding: 1rem; text-align: left;">Status</th>
+                            <th style="padding: 1rem; text-align: left;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 1rem;">Morning Vinyasa</td>
+                            <td style="padding: 1rem;">Mon, Wed, Fri (6:00 AM)</td>
+                            <td style="padding: 1rem;">15 / 20</td>
+                            <td style="padding: 1rem;"><span style="color: var(--color-success);">Active</span></td>
+                            <td style="padding: 1rem;"><button class="btn btn-sm"
+                                    style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem;">Evening Hatha</td>
+                            <td style="padding: 1rem;">Daily (5:00 PM)</td>
+                            <td style="padding: 1rem;">18 / 20</td>
+                            <td style="padding: 1rem;"><span style="color: var(--color-success);">Active</span></td>
+                            <td style="padding: 1rem;"><button class="btn btn-sm"
+                                    style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

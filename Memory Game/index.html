@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match - Pro Edition</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="no-select">
+
+  <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <div id="game-container">
+    <!-- Setup Screen -->
+    <section id="setup-screen" class="screen">
+      <div class="card-panel">
+        <h1>Memory Match</h1>
+        <p>Select your preferences and start matching!</p>
+
+        <div class="setup-group" id="difficulty-selector">
+          <label>Difficulty</label>
+          <div class="selector">
+            <button class="choice active" data-difficulty="easy">Easy <span>4x4</span></button>
+            <button class="choice" data-difficulty="medium">Medium <span>4x5</span></button>
+            <button class="choice" data-difficulty="hard">Hard <span>6x6</span></button>
+          </div>
+        </div>
+
+        <div class="setup-group" id="theme-selector">
+          <label>Emoji category</label>
+          <div class="selector">
+            <button class="choice active" data-theme="mix">Mix</button>
+            <button class="choice" data-theme="fruits">Fruits</button>
+            <button class="choice" data-theme="animals">Animals</button>
+            <button class="choice" data-theme="food">Food</button>
+            <button class="choice" data-theme="vehicles">Vehicles</button>
+            <button class="choice" data-theme="vegetables">Vegetables</button>
+          </div>
+        </div>
+
+        <div class="setup-group" id="mode-selector">
+          <label>Game Mode</label>
+          <div class="selector">
+            <button class="choice active" data-mode="time">Time</button>
+            <button class="choice" data-mode="moves">Moves</button>
+            <button class="choice" data-mode="free">Free</button>
+          </div>
+          <!-- Mode specific options -->
+          <div id="time-options" class="options-drawer">
+            <span>Timer Limit:</span>
+            <select id="time-limit-select">
+              <option value="30">30 Seconds</option>
+              <option value="60" selected>60 Seconds</option>
+              <option value="120">120 Seconds</option>
+              <option value="999999">Unlimited</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="start-btn" class="btn primary">Start Game</button>
+      </div>
+    </section>
+
+    <!-- Game Interface -->
+    <section id="game-screen" class="screen hidden">
+      <header class="game-header">
+        <button id="back-to-menu" class="btn-icon" title="Go back">←</button>
+        <div class="status-panel">
+          <div class="stat" id="timer-box">
+            <span class="stat-label" id="timer-label">Time</span>
+            <span class="stat-value" id="timer-val">00:00</span>
+          </div>
+          <div class="stat" id="moves-box">
+            <span class="stat-label">Moves</span>
+            <span class="stat-value" id="moves-count">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Pairs</span>
+            <span class="stat-value" id="match-count">0/0</span>
+          </div>
+        </div>
+        <button id="reset-btn" class="btn-icon" title="Reset game">↻</button>
+      </header>
+
+      <div id="game-board">
+        <!-- Cards will be generated via JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Win/Loss Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="card-panel modal">
+      <h2 id="modal-title">Victory!</h2>
+      <p id="modal-message">You matched all icons!</p>
+      <div class="modal-actions">
+        <button id="modal-home-btn" class="btn secondary">Menu</button>
+        <button id="modal-restart-btn" class="btn primary">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
