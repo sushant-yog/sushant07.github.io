@@ -239,11 +239,12 @@ body:not(.dark-theme) .fa-sun {
 
 /* --- Buttons --- */
 .btn {
-    padding: 12px 30px;
+    padding: 10px 22px;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     border: none;
     display: inline-block;
@@ -552,6 +553,8 @@ body:not(.dark-theme) .fa-sun {
 
     .hero .tagline {
         font-size: 1.1rem;
+        max-width: 85%;
+        margin: 0 auto 30px;
     }
 
     .grid {
